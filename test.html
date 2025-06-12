@@ -4,12 +4,22 @@
   <meta charset="utf-8">
   <title>Test Captions</title>
 </head>
+
 <body>
   <h1>🎯 Test CD01 Captions</h1>
   <video controls crossorigin="anonymous" width="600">
     <source src="CD01.mp3" type="audio/mpeg">
-    <track kind="subtitles" src="CD01.vtt" srclang="en" label="English" default>
+    <track kind="captions" src="CD01.vtt" srclang="en" label="English" default>
   </video>
   <p>If captions do not appear, check the CC button or triple-dot menu.</p>
+  
+  <script>
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('video').forEach(video => {
+    video.textTracks[0].mode = 'showing';
+  });
+});
+</script>
+
 </body>
 </html>
