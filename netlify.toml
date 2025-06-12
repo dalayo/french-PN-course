@@ -2,3 +2,5 @@
   for = "/*.vtt"
   [headers.values]
     Content-Type = "text/vtt"
+[build.processing]
+  skip_processing = true
